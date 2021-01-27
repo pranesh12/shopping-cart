@@ -1,10 +1,10 @@
-//first button
+//Iphone eleven 
 const firstAddition = document.getElementById("add");
 const firstDeletion = document.getElementById("remove")
 const firstNumber = document.getElementById("firstNumber");
 const firstInput = document.getElementById("input_value");
 
-//Second card 
+//Iphone case  
 const secondAddition = document.getElementById("secondAdd");
 const secondDeletion = document.getElementById("secondRemove");
 const secondNumber = document.getElementById("secondNumber");
@@ -16,25 +16,33 @@ let sub_total = document.getElementById("sub_total");
 
 //Adding Iphone
 firstAddition.addEventListener("click",function(){
-    add(firstInput,1219,firstNumber)
-
+    let num =add(firstInput,1219,firstNumber);
+    let currentSub = parseInt(num.innerText);
+    sub_total.innerText = currentSub;
 })
 
 //Adding case 
 secondAddition.addEventListener("click",function(){
-    add(secondInput,59,secondNumber)
-
+    let sum = add(secondInput,59,secondNumber)
+    let currentSub = parseInt(sum.innerText);
+    sub_total.innerText = currentSub;
 })
+
 
 //removing iphone 
 firstDeletion.addEventListener("click",function(){
-    remove(firstInput,1219,firstNumber) 
+   let num = remove(firstInput,1219,firstNumber);
+   let currentSub = parseInt(num.innerText);
+    sub_total.innerText = currentSub;
 })
 
 //removing iphone case
 secondDeletion.addEventListener("click",function(){
-   remove(secondInput,59,secondNumber)
+  let num =  remove(secondInput,59,secondNumber);
+   let currentSub = parseInt(num.innerText);
+    sub_total.innerText = currentSub;
 })
+
 
 function add(input_value,dam,number){
     let InitialCount = parseInt(input_value.value);
@@ -58,6 +66,9 @@ function remove(input_value,dam,number){
     return number;
 }
 
+// function subTotal (){
+//     sub_total.innerText = 
+// }
 
 //Removing 
 
